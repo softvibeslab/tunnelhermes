@@ -1,0 +1,8 @@
+__pycache__/
+state/
+hermes-cursor-state/
+output/
+*.eml
+.env
+*.token
+token

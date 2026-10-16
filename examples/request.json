@@ -1,0 +1,18 @@
+{
+  "operation": "enrich_user_story",
+  "request_id": "cursor-demo-001",
+  "client": "cursor",
+  "project": "piloto-interno",
+  "stage": "enriquecimiento",
+  "mode": "draft_only",
+  "story": {
+    "title": "Consultar estado de pedido",
+    "description": "Como usuario autorizado quiero consultar el estado de mi pedido para conocer su avance."
+  },
+  "repo_candidates": [],
+  "constraints": [
+    "No modificar repositorios ni escribir en Azure DevOps.",
+    "Separar propuestas, hechos y pendientes.",
+    "Sin fuentes de código para este smoke test; declarar ese límite."
+  ]
+}

@@ -1,0 +1,6 @@
+---
+description: Invocar Hermes remoto para proponer enriquecimiento de HU con evidencia
+globs:
+alwaysApply: false
+---
+Usar solo cuando el usuario solicite enriquecimiento con Hermes. Confirmar proyecto y rama, preparar request JSON con mode draft_only y ejecutar el cliente del kit. No introducir secretos en prompts, reglas, comandos literales o Git; obtenerlos por entorno del proceso. No enviar documentos de clientes sin autorización. Leer el archivo de respuesta y distinguir datos verificados, propuestas y pendientes. No escribir ni comentar en Azure DevOps. sources_used es una afirmación del agente que requiere comprobación. Si faltan credenciales o hay error, reportarlo, no inventar una respuesta ni reintentar ciegamente.

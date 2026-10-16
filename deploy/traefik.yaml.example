@@ -1,0 +1,32 @@
+# Plantilla: sustituir dominio, entrypoints, resolver y dirección backend.
+# No instalar un segundo proxy; revisar el existente. No publicar este archivo sin renderizar.
+http:
+  routers:
+    hermes-cursor:
+      rule: Host(`REPLACE_DOMAIN`)
+      entryPoints: [https]
+      tls:
+        certResolver: REPLACE_CERT_RESOLVER
+      service: hermes-cursor
+      middlewares: [hermes-cursor-rate]
+  middlewares:
+    hermes-cursor-rate:
+      rateLimit:
+        average: 2
+        period: 1s
+        burst: 4
+  services:
+    hermes-cursor:
+      loadBalancer:
+        serversTransport: hermes-cursor-timeout
+        servers:
+          - url: http://REPLACE_PRIVATE_BACKEND:8797
+        healthCheck:
+          path: /health
+          interval: 20s
+          timeout: 5s
+  serversTransports:
+    hermes-cursor-timeout:
+      forwardingTimeouts:
+        dialTimeout: 10s
+        responseHeaderTimeout: 390s

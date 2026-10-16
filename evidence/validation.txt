@@ -1,0 +1,48 @@
+UTC: 2026-10-15T23:43:45.322558+00:00
+COMMAND: python3 -m unittest discover -s tests -v
+Scope: actual local HTTP server; controlled runners; subprocess error; NOT real Hermes LLM, remote deployment or Cursor E2E
+EXIT: 0
+{"request_id": "test-001", "status": 200}
+{"request_id": "test-001", "status": 500}
+{"request_id": "test-001", "status": 200}
+{"request_id": "test-001", "status": 200}
+test_bad_json (test_bridge.ContractTests.test_bad_json) ... ok
+test_bad_root (test_bridge.ContractTests.test_bad_root) ... ok
+test_body_limit (test_bridge.ContractTests.test_body_limit) ... ok
+test_branch_required (test_bridge.ContractTests.test_branch_required) ... ok
+test_concurrency (test_bridge.ContractTests.test_concurrency) ... ok
+test_default_profile_rejected (test_bridge.ContractTests.test_default_profile_rejected) ... ok
+test_draft_only (test_bridge.ContractTests.test_draft_only) ... ok
+test_empty_token_fails_closed (test_bridge.ContractTests.test_empty_token_fails_closed) ... ok
+test_error_is_sanitized (test_bridge.ContractTests.test_error_is_sanitized) ... ok
+test_health (test_bridge.ContractTests.test_health) ... ok
+test_insecure_token_permissions_fail_closed (test_bridge.ContractTests.test_insecure_token_permissions_fail_closed) ... ok
+test_invalid_operation (test_bridge.ContractTests.test_invalid_operation) ... ok
+test_missing_token_fails_closed (test_bridge.ContractTests.test_missing_token_fails_closed) ... ok
+test_nested_types (test_bridge.ContractTests.test_nested_types) ... ok
+test_policy_blocks_start (test_bridge.ContractTests.test_policy_blocks_start) ... ok
+test_private_bind_config (test_bridge.ContractTests.test_private_bind_config) ... ok
+test_process_bad_json (test_bridge.ContractTests.test_process_bad_json) ... ok
+test_process_json_envelope (test_bridge.ContractTests.test_process_json_envelope) ... ok
+test_process_timeout (test_bridge.ContractTests.test_process_timeout) ... ok
+test_project_not_allowed (test_bridge.ContractTests.test_project_not_allowed) ... ok
+test_real_subprocess_failure (test_bridge.ContractTests.test_real_subprocess_failure) ... ok
+test_repo_not_allowed (test_bridge.ContractTests.test_repo_not_allowed) ... ok
+test_success_runner_fixture (test_bridge.ContractTests.test_success_runner_fixture) ... ok
+test_token_rotation (test_bridge.ContractTests.test_token_rotation) ... ok
+test_unauthorized (test_bridge.ContractTests.test_unauthorized) ... ok
+test_unknown_fields (test_bridge.ContractTests.test_unknown_fields) ... ok
+test_unknown_route (test_bridge.ContractTests.test_unknown_route) ... ok
+test_wrong_media_type (test_bridge.ContractTests.test_wrong_media_type) ... ok
+test_no_auth_forward_to_redirect_target (test_client.RedirectTests.test_no_auth_forward_to_redirect_target) ... ok
+test_redirect_handler_blocks_http_and_https_targets (test_client.RedirectTests.test_redirect_handler_blocks_http_and_https_targets) ... /root/.hermes/tools/python-3.14.7+20260901-linux-x64/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 307: 'Redirect blocked'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 11.588s
+
+OK
+
+ADDITIONAL: configure CLI separately exercised: fresh 0600 token, policy=false, overwrite rejected; no Hermes profile created.
+Security review: client redirects blocked; empty/missing/insecure token fails closed. Regression tests included.
