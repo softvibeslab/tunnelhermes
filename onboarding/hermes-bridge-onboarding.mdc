@@ -1,0 +1,6 @@
+---
+description: Onboarding seguro para usar Hermes–Cursor desde una terminal local
+globs:
+alwaysApply: false
+---
+Cuando el usuario solicite conectar Hermes–Cursor, remite a onboarding/README.md del kit. La URL HTTPS completa se puede compartir; el token NO se pega en Cursor Chat, reglas, archivos del proyecto ni comandos. Solicita al usuario que ejecute personalmente `python3 onboarding/cursor_onboarding.py --url URL_HTTPS examples/request.json --out output/borrador-001.json` desde la carpeta del kit en una terminal interactiva de su Mac e introduzca el token en el prompt oculto. El agente no pide ni lee el token, no ejecuta este paso por el usuario y no copia credenciales de otro perfil. Antes de usar una URL, el administrador debe confirmar que el servicio HTTPS y el modelo se probaron con un POST válido; DNS y /health no bastan. La respuesta sigue siendo un borrador (`evidence_verified=false`); verificar las fuentes y no escribir en Azure DevOps.

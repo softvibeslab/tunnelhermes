@@ -31,4 +31,6 @@ Requisitos: Linux, Python 3.11+, Hermes instalado y configurado, usuario de serv
 
 El output no se sobrescribe. No hay reintentos automáticos ni deduplicación persistente. request_id correlaciona pero NO garantiza idempotencia. Una respuesta 200 es borrador; evidence_verified permanece false hasta comprobación externa.
 
+Para un alta manual desde la terminal de Cursor sin pegar el token en el chat, consulta [onboarding/README.md](onboarding/README.md). El asistente solicita el token con entrada oculta y no lo guarda; necesita un bridge HTTPS ya publicado y un modelo probado.
+
 Templates systemd y Traefik son ejemplos con sustituciones explícitas, no instaladores ejecutados. No se modifica infraestructura al descomprimir o configurar el kit. El administrador debe instalar y validar esos templates conscientemente.
